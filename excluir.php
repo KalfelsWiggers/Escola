@@ -1,11 +1,10 @@
 <?php
-    include("conecta.php");
-    $matricula  = $_GET["M"];
+include("conecta.php");
+$matricula = $_GET["m"];
 
-    $comando = $pdo->prepare("DELETE FROM alunos WHERE matricula=$matricula");
-    $resultado = $comando->execute();
 
-    // Para voltar no formulário:
-        header("Location: cadastro.html");
+$comando = $pdo->prepare("DELETE FROM alunos WHERE matricula=$matricula");
+$resultado = $comando->execute();
 
+header("location: cadastro.html");
 ?>
