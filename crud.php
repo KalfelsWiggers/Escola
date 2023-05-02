@@ -5,7 +5,7 @@
     $nome      = $_POST["nome"];
     $idade     = $_POST["idade"];
 
-    if(isset($_POST["inserir"]) )
+    if(isset($_POST["gravar"]) )
     {
         $comando = $pdo->prepare("INSERT INTO alunos VALUE($matricula,'$nome',$idade)");
     }
